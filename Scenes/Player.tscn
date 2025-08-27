@@ -129,11 +129,11 @@ radius = 23.4094
 script = ExtResource("1_kyqiw")
 
 [node name="Player_animations" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
 position = Vector2(0, -2)
 sprite_frames = SubResource("SpriteFrames_o3h8g")
-animation = &"Right"
+animation = &"Idle"
 autoplay = "Idle"
-frame_progress = 0.593499
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -2)
