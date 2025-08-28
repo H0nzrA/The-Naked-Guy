@@ -1,45 +1,98 @@
-# ---------------------------
 # Godot 4+ specific ignores
-# ---------------------------
 .godot/
-.nomedia
 .import/
-export.cfg
-export_presets.cfg
-export_credentials.cfg
-*.translation
 
-# ---------------------------
-# Mono / C# specific ignores
-# ---------------------------
+# Godot-specific ignores (legacy)
+.godot_projects/
+export_presets.cfg
+
+# Mono-specific ignores (Godot 3.x with C#)
 .mono/
 data_*/
 mono_crash.*.json
+
+# MSBuild / Visual Studio specific
 bin/
 obj/
-*.csproj
-*.sln
+.vs/
+*.tmp
 *.user
 *.suo
+*.sln.docstates
 
-# ---------------------------
-# IDE specific
-# ---------------------------
+# C# / .NET specific
+*.dll
+*.exe
+*.pdb
+*.mdb
+*.cache
+*.pidb
+*.userprefs
+*.csproj.user
+*.lock.json
+
+# NuGet packages
+packages/
+*.nupkg
+
+# Visual Studio Code
 .vscode/
-.vs/
+*.code-workspace
 
-# ---------------------------
-# OS-specific junk files
-# ---------------------------
-# Windows
-Thumbs.db
-ehthumbs.db
-Desktop.ini
+# JetBrains Rider
+.idea/
+*.sln.iml
 
-# macOS
+# MonoDevelop / Xamarin Studio
+*.userprefs
+
+# OS specific
 .DS_Store
-.AppleDouble
-.LSOverride
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
 
-# Linux
+# Temporary files
+*.tmp
+*.temp
 *~
+
+# Log files
+*.log
+
+# Crash reports
+*.stackdump
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+build/
+bld/
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio files
+*.vspscc
+*.vssscc
+.builds
+*.dotCover
+
+# Android (if using Godot Android export)
+android/
+*.apk
+*.aab
+
+# iOS (if using Godot iOS export)
+ios/
+*.ipa
+
+# Custom export templates
+export/
+dist/
