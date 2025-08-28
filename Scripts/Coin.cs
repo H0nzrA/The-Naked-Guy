@@ -3,9 +3,25 @@ using System;
 
 public partial class Coin : Area2D
 {
-	// Called when the node enters the scene tree for the first time.
-	public override void _Ready()
-	{
-		GD.Print("Coin scenes ready");
-	}
+    private GameManager gameManager;
+
+    [Signal]
+    public delegate void CoinPickedUpEventHandler();
+
+    public override void _Ready()
+    {
+        gameManager = GetNode<GameManager>("%Game Manager");
+
+        BodyEntered += OnBodyEntered;
+    }
+
+    private void OnBodyEntered(Node2D body)
+    {
+        if (body is Player)
+        {
+            EmitSignal(SignalName.CoinPickedUp);
+            gameManager.AddScore();
+            QueueFree();
+        }
+    }
 }

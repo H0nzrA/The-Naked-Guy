@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctxne461jc6fd"
-path="res://.godot/imported/Button_menu.png-b2958e93a3e68be4b14f09b0c03da305.ctex"
+uid="uid://bti1trl8dxut7"
+path="res://.godot/imported/world_tileset.png-23e5694546e6be00fdc2ef3e740c4128.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/Button_menu.png"
-dest_files=["res://.godot/imported/Button_menu.png-b2958e93a3e68be4b14f09b0c03da305.ctex"]
+source_file="res://Assets/Images/world_tileset.png"
+dest_files=["res://.godot/imported/world_tileset.png-23e5694546e6be00fdc2ef3e740c4128.ctex"]
 
 [params]
 

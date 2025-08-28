@@ -15,11 +15,11 @@ public partial class MainMenu : Control
     [Signal]
     public delegate void ExitPressedEventHandler();
     Button exitButton;
+
+    [Export] public PackedScene GameScene;
     
 	public override void _Ready()
 	{
-		GD.Print("Main menu scene ready");
-
 		// Get buttons
 		startButton = GetNode<Button>("Button option/Start");
 		startButton.Pressed += OnStartButtonPressed;
@@ -35,7 +35,16 @@ public partial class MainMenu : Control
 	{
 		GD.Print("Button Start pressed -> signal");
 		EmitSignal(SignalName.StartPressed);
-	}
+
+        if (GameScene != null)
+        {
+            GetTree().ChangeSceneToPacked(GameScene);
+        }
+        else
+        {
+            GD.PrintErr("GameScene not assign!!");
+        }
+    }
 
     public void OnSettingsButtonPressed()
     {

@@ -9,7 +9,6 @@ public partial class Enemy : CharacterBody2D
 
     public override void _Ready()
     {
-        GD.Print("Enemy scene ready");
         p_sprite = GetNode<AnimatedSprite2D>("Enemy_animations");
     }
 
