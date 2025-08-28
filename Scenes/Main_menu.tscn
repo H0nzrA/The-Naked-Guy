@@ -1,0 +1,126 @@
+[gd_scene load_steps=9 format=3 uid="uid://cgj5m2sjkip7a"]
+
+[ext_resource type="Texture2D" uid="uid://c38bmo1lvdtwx" path="res://Assets/Images/Background_main_menu.jpg" id="1_7sp8y"]
+[ext_resource type="Script" uid="uid://dade3syk7dal3" path="res://Scripts/MainMenu.cs" id="1_f7j37"]
+[ext_resource type="FontFile" uid="uid://qf3mw6dvpdun" path="res://Assets/Fonts/Title.TTF" id="2_pc006"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pc006"]
+texture = ExtResource("1_7sp8y")
+modulate_color = Color(0.306923, 0.306923, 0.306923, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pc006"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pc006"]
+bg_color = Color(0.276204, 0.41366, 0.746894, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+shadow_size = 14
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f7j37"]
+bg_color = Color(0.11274, 0.145725, 0.598377, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+shadow_size = 14
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spmoy"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+shadow_size = 14
+
+[node name="Main Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_f7j37")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_pc006")
+
+[node name="Game title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -315.5
+offset_right = 315.5
+offset_bottom = 207.0
+grow_horizontal = 2
+theme_override_colors/font_shadow_color = Color(0, 0.413466, 0, 1)
+theme_override_constants/shadow_offset_x = 10
+theme_override_constants/shadow_offset_y = 12
+theme_override_fonts/font = ExtResource("2_pc006")
+theme_override_font_sizes/font_size = 100
+text = "The Naked Guy
+Collect Coin"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button option" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -179.0
+offset_top = 39.0
+offset_right = 174.0
+offset_bottom = 296.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Start" type="Button" parent="Button option"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_pc006")
+theme_override_styles/hover = SubResource("StyleBoxFlat_pc006")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_f7j37")
+theme_override_styles/normal = SubResource("StyleBoxFlat_spmoy")
+text = "Start Game"
+
+[node name="Settings" type="Button" parent="Button option"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_pc006")
+theme_override_styles/hover = SubResource("StyleBoxFlat_pc006")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_f7j37")
+theme_override_styles/normal = SubResource("StyleBoxFlat_spmoy")
+text = "Settings"
+
+[node name="Exit" type="Button" parent="Button option"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_pc006")
+theme_override_styles/hover = SubResource("StyleBoxFlat_pc006")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_f7j37")
+theme_override_styles/normal = SubResource("StyleBoxFlat_spmoy")
+text = "Exit"
