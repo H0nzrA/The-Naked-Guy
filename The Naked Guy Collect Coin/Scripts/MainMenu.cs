@@ -31,6 +31,26 @@ public partial class MainMenu : Control
         exitButton.Pressed += OnExitButtonPressed;
     }
 
+    public override void _Process(double delta)
+    {
+        if (Input.IsActionPressed("Enter"))
+        {
+            EmitSignal(SignalName.StartPressed);
+            if (GameScene != null)
+            {
+                GetTree().ChangeSceneToPacked(GameScene);
+            }
+            else
+            {
+                GD.PrintErr("GameScene not assign!!");
+            }   
+        }
+        else if (Input.IsActionPressed("Exit"))
+        {
+            EmitSignal(SignalName.ExitPressed);
+            GetTree().Quit();
+        }
+    }
 	public void OnStartButtonPressed()
 	{
 		GD.Print("Button Start pressed -> signal");

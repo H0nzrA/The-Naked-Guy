@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://cgj5m2sjkip7a"]
+[gd_scene load_steps=10 format=3 uid="uid://cgj5m2sjkip7a"]
 
 [ext_resource type="Texture2D" uid="uid://c38bmo1lvdtwx" path="res://Assets/Images/Background_main_menu.jpg" id="1_7sp8y"]
 [ext_resource type="Script" uid="uid://dade3syk7dal3" path="res://Scripts/MainMenu.cs" id="1_f7j37"]
+[ext_resource type="PackedScene" uid="uid://dyolc0uvgaj8d" path="res://Scenes/Game.tscn" id="2_787fc"]
 [ext_resource type="FontFile" uid="uid://qf3mw6dvpdun" path="res://Assets/Fonts/Title.TTF" id="2_pc006"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pc006"]
@@ -42,6 +43,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_f7j37")
+GameScene = ExtResource("2_787fc")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1

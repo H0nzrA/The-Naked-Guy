@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://dyolc0uvgaj8d"]
+[gd_scene load_steps=9 format=3 uid="uid://dyolc0uvgaj8d"]
 
+[ext_resource type="PackedScene" uid="uid://bnjftn1easifo" path="res://Scenes/Congratulation.tscn" id="1_7lihs"]
 [ext_resource type="PackedScene" uid="uid://ciu0qepxjilti" path="res://Scenes/Player.tscn" id="1_iukft"]
 [ext_resource type="Script" uid="uid://c4dmxel4lrxfj" path="res://Scripts/GameManager.cs" id="1_kldst"]
 [ext_resource type="Texture2D" uid="uid://bti1trl8dxut7" path="res://Assets/Images/world_tileset.png" id="2_gl6un"]
 [ext_resource type="PackedScene" uid="uid://b161jy5cmpb74" path="res://Scenes/Coin.tscn" id="3_j5yw3"]
+[ext_resource type="PackedScene" uid="uid://cqhuyr0xeklno" path="res://Scenes/Enemy.tscn" id="5_b2bpf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iukft"]
 texture = ExtResource("2_gl6un")
@@ -152,6 +154,10 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 50
 text = "Score: 0"
 
+[node name="Congratulation" parent="HUD" instance=ExtResource("1_7lihs")]
+unique_name_in_owner = true
+visible = false
+
 [node name="Game Manager" type="Node" parent="."]
 unique_name_in_owner = true
 script = ExtResource("1_kldst")
@@ -259,3 +265,20 @@ position = Vector2(522, 162)
 
 [node name="Player" parent="." instance=ExtResource("1_iukft")]
 position = Vector2(765, 639)
+
+[node name="Enemy" type="Node" parent="."]
+
+[node name="1" parent="Enemy" instance=ExtResource("5_b2bpf")]
+position = Vector2(18, 265)
+
+[node name="2" parent="Enemy" instance=ExtResource("5_b2bpf")]
+position = Vector2(815, 163)
+
+[node name="3" parent="Enemy" instance=ExtResource("5_b2bpf")]
+position = Vector2(343, 363)
+
+[node name="4" parent="Enemy" instance=ExtResource("5_b2bpf")]
+position = Vector2(900, 536)
+
+[node name="5" parent="Enemy" instance=ExtResource("5_b2bpf")]
+position = Vector2(20, 540)

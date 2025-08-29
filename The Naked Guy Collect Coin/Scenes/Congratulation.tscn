@@ -1,0 +1,48 @@
+[gd_scene load_steps=4 format=3 uid="uid://bnjftn1easifo"]
+
+[ext_resource type="Texture2D" uid="uid://c38bmo1lvdtwx" path="res://Assets/Images/Background_main_menu.jpg" id="1_ajqwh"]
+[ext_resource type="FontFile" uid="uid://qf3mw6dvpdun" path="res://Assets/Fonts/Title.TTF" id="2_ljhfc"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e4mih"]
+texture = ExtResource("1_ajqwh")
+modulate_color = Color(0.306923, 0.306923, 0.306923, 1)
+
+[node name="Congratulation" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_e4mih")
+
+[node name="Congratulation Texte" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -404.5
+offset_top = -103.5
+offset_right = 404.5
+offset_bottom = 103.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0.413466, 0, 1)
+theme_override_constants/shadow_offset_x = 10
+theme_override_constants/shadow_offset_y = 12
+theme_override_fonts/font = ExtResource("2_ljhfc")
+theme_override_font_sizes/font_size = 100
+text = "Congratulation
+No more naked guy "
+horizontal_alignment = 1
+vertical_alignment = 1

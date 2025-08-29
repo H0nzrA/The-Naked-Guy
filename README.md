@@ -1,2 +1,5 @@
 # Coin-Collector
-Simple coin collector game with Godot + C# in 24h
+Simple coin collector game with Godot + C#
+
+## Game
+A naked Guy who need some money
