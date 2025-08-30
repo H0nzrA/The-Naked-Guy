@@ -94,5 +94,4 @@ ios/
 *.ipa
 
 # Custom export templates
-export/
 dist/
